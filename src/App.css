@@ -14,9 +14,11 @@
 }
 .banner-image{
   width: 100%;
+  /* opacity: 0; */
 }
 .banner{
-
+  /* background-image: url('../public/banner.png');
+  background-size: contain; */
 }
 .eligibility{
   display: flex;
