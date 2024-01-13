@@ -4,11 +4,9 @@ export function Navbar() {
     return (
         <>
             <div className="navbar">
-                <div className="logo">
-                    <img src={logo} />
-                </div>
-                <div className="navbar-button">
-                    <button>Connect Wallet</button>
+                <div className="container">
+                    <img src={logo} className="logo" />
+                    <button className="navbar-button">Connect Wallet</button>
                 </div>
             </div>
         </>

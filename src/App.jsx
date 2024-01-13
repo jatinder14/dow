@@ -1,8 +1,11 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import homeBackground from '../public/home.png'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { Navbar } from './components/Navbar'
+import { Banner } from './components/Banner'
+import { Eigibility } from './components/Eligibility'
+import { Proposal } from './components/Proposal'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,7 +14,11 @@ function App() {
     <>
       <div>
         <Navbar />
-        suman
+        <div className='container'>
+          <Banner />
+          <Eigibility />
+          <Proposal />
+        </div>
       </div>
     </>
   )

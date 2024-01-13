@@ -1,18 +1,122 @@
 .navbar {
   background-color: #770D06;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
 }
 .navbar-button {
   background-color: #FFFFFF;
   color: #770D06;
   border: none;
-  border-radius: 23px;
-  padding: 10px;
+  border-radius: 5px;
+  padding: 14px;
   font-weight: bold;
-  
 }
+.logo{
+  width: 42px;
+}
+.banner-image{
+  width: 100%;
+}
+.banner{
+
+}
+.eligibility{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.eligibility h2{
+  color: #FFFFFF;
+}
+.eligibility-paragraph{
+  width: 50vw;
+  color: #E0E0E0;
+}
+.email-input button{
+  color: #FFFFFF;
+  background-color: #770D06;
+  border: none;
+  border-radius: 5px;
+  padding: 14px;
+  font-weight: bold;
+}
+.email-input input{
+  border: 1.11px solid #40403E;
+  border-radius: 5px;
+  padding: 12px;
+}
+.proposal{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body{
+  /* background-image: radial-gradient(#760D07,black); */
+  background-color:black; 
+  color: #FFFFFF;
+}
+.text-executed{
+  color: #30BE83;
+  font-weight: 500;
+  font-size: 14px;
+}
+.text-canceled {
+  color: #CC333C !important;
+}
+.button-passed{
+  border: 1px solid #30BE83;
+  background: #30be552e;
+  border-radius: 5px;
+  color: #30BE83 !important;
+  padding: 7px 22px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.button-vote{
+  border: 1px solid #FFFFFF;
+  background: #8080805e;
+  border-radius: 5px;
+  color: #FFFFFF !important;
+  padding: 7px 22px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.button-failed{
+  border: 1px solid #CC333C;
+  background: #cc333c29;
+  border-radius: 5px;
+  color: #CC333C !important;
+  padding: 7px 22px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.proposal-detail{
+  color: #8080805e;
+  font-size: 20px;
+  font-weight: 900;
+}
+.proposal-text {
+  font-weight: 700;
+  font-size: 20px;
+}
+.date-time{
+  color: #8080805e;
+  font-weight: 500;
+  font-size: 14px;
+}
+.pagination-right {
+  float: right;
+  color: pink !important;
+}
+.color {
+  background-color: white !important ;
+  color: pink !important;
+}
+
+
+
+
+
 /* #root {
   max-width: 1280px;
   margin: 0 auto;
