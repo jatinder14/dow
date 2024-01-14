@@ -2,24 +2,24 @@ import { useState } from 'react'
 import homeBackground from '../public/home.png'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { Signup } from "./components/pages/Signup"
+const Home = React.lazy(import("./Home"))
 import { Navbar } from './components/Navbar'
-import { Banner } from './components/Banner'
-import { Eigibility } from './components/Eligibility'
-import { Proposal } from './components/Proposal'
+
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <Navbar />
-        <div className='container'>
-          <Banner />
-          <Eigibility />
-          <Proposal />
-        </div>
-      </div>
+      <BrowserRouter>
+      <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />}  ></Route>
+          <Route path="/signup" element={<Signup />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

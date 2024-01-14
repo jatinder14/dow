@@ -14,9 +14,13 @@
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.15.4",
     "bootstrap": "^5.3.2",
+    "localforage": "^1.10.0",
+    "match-sorter": "^6.3.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.2",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.2",
+    "sort-by": "^1.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
