@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { Signup } from "./components/pages/Signup"
-const Home = React.lazy(import("./Home"))
+import Home  from "./Home"
 import { Navbar } from './components/Navbar'
 
 
@@ -13,8 +13,8 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
       <Navbar />
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}  ></Route>
           <Route path="/signup" element={<Signup />} />
