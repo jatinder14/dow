@@ -3,6 +3,7 @@ import { Governance } from "../common/GovernanceLink";
 import { Content } from "../common/Content";
 import { useLocation, /* other hooks */ } from 'react-router-dom';
 import { VoteList } from "../common/VoteList";
+import { MessageProgress } from "../common/MessageProgress";
 
 
 export function ViewProposal() {
@@ -13,6 +14,7 @@ export function ViewProposal() {
             <Governance />
             <div className="row">
                 <Content type={type} amount={amount} vote={vote} />
+                <MessageProgress />
             </div>
             <VoteList />
 

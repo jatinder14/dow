@@ -74,6 +74,14 @@
   border-radius: 5px;
   padding: 12px;
 }
+.MessageProgress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.line {
+  margin: -18px;
+}
 .barCompleted {
   background-color: #30BE83;
   width: 80%;
