@@ -1,6 +1,7 @@
 .navbar {
   background-color: #770D06;
 }
+
 .navbar-button {
   background-color: #FFFFFF;
   color: #770D06;
@@ -9,39 +10,47 @@
   padding: 14px;
   font-weight: bold;
 }
-.logo{
+
+.logo {
   width: 42px;
 }
-.banner-image{
+
+.banner-image {
   width: 100%;
   /* opacity: 0; */
 }
-.banner{
+
+.banner {
   /* background-image: url('../public/banner.png');
   background-size: contain; */
 }
-.governance{
+
+.governance {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: baseline;
   padding: 20px;
 }
-.eligibility{
+
+.eligibility {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
 }
-.eligibility h2{
+
+.eligibility h2 {
   color: #FFFFFF;
 }
-.eligibility-paragraph{
+
+.eligibility-paragraph {
   width: 50vw;
   color: #E0E0E0;
 }
-.email-input button{
+
+.email-input button {
   color: #FFFFFF;
   background-color: #770D06;
   border: none;
@@ -50,6 +59,7 @@
   font-weight: bold;
   margin: 0px -3px;
 }
+
 .email-input input {
   border: 1.11px solid #40403E;
   border-radius: 5px;
@@ -64,7 +74,22 @@
   border-radius: 5px;
   padding: 12px;
 }
-.option-input textarea{
+.barCompleted {
+  background-color: #30BE83;
+  width: 80%;
+}
+.progress-container {
+  background-color: #30be837d;
+  height: 10px;
+
+}
+.vote-table {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.option-input textarea {
   border: 1.11px solid #40403E;
   border-radius: 5px;
   padding: 12px;
@@ -73,24 +98,29 @@
   background: transparent !important;
   color: #E0E0E0;
 }
-.proposal{
+
+.proposal {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-body{
+
+body {
   /* background-image: radial-gradient(#760D07,black); */
-  background-color:black; 
+  background-color: black;
   color: #FFFFFF;
 }
-.text-executed{
+
+.text-executed {
   color: #30BE83;
   font-weight: 500;
   font-size: 14px;
 }
+
 .text-canceled {
   color: #CC333C !important;
 }
+
 .button-passed {
   border: 1px solid #30BE83;
   background: #30be552e;
@@ -101,6 +131,7 @@ body{
   font-size: 13px;
   margin-right: 8px;
 }
+
 .button-core {
   border: 1px solid #9542FF;
   background: #9930be36;
@@ -111,11 +142,13 @@ body{
   font-size: 13px;
   margin-right: 8px;
 }
-.button-core img{
+
+.button-core img {
   margin: 0px 7px 4px 0px;
   width: 12px;
 }
-.button-vote{
+
+.button-vote {
   border: 1px solid #FFFFFF;
   background: #8080805e;
   border-radius: 5px;
@@ -125,7 +158,8 @@ body{
   font-size: 13px;
   margin-right: 8px;
 }
-.button-failed{
+
+.button-failed {
   border: 1px solid #CC333C;
   background: #cc333c29;
   border-radius: 5px;
@@ -134,47 +168,57 @@ body{
   font-weight: 500;
   font-size: 13px;
 }
-.proposal-detail{
+
+.proposal-detail {
   color: #8080805e;
   font-size: 20px;
   font-weight: 900;
   background-color: transparent;
-  border:none;
+  border: none;
 }
+
 .proposal-text {
   font-weight: 700;
   font-size: 20px;
 }
-.date-time{
+
+.date-time {
   color: #8080805e;
   font-weight: 500;
   font-size: 14px;
 }
+
 .pagination-right {
   float: right;
   color: pink !important;
 }
+
 #extra-content {
   display: none;
 }
+
 #myBtn {
   background-color: transparent !important;
   border: none;
-  color:white;
+  color: white;
   padding: 0px;
 }
+
 .content-text {
   color: #9A9A9A;
   font-size: 15px;
   text-align: justify;
 }
+
 .highlighted-text {
   color: white;
   font-size: 15px;
 }
-.down-arrowhead img{
+
+.down-arrowhead img {
   width: 18px;
 }
+
 /* .color {
   background-color: white !important ;
   color: pink !important;
@@ -186,48 +230,86 @@ body{
   border: none;
   background: transparent !important;
 }
+
 .symbol {
   font-weight: bolder;
   font-size: large;
 }
-.propoasl-title{
+
+.propoasl-title {
   background: transparent !important;
   color: #E0E0E0;
   width: 100%;
 }
-.option-container{
-border: 1px solid #12060540;
-background-color: #12060540;
-border-radius: 10px;
+
+.option-container {
+  border: 1px solid #12060540;
+  background-color: #12060540;
+  border-radius: 10px;
 
 }
+
 .option-header {
-padding: 8px 14px 8px 14px;
-font-weight: 600;
-display: flex;
-justify-content: space-between;
-align-items: center;
+  padding: 8px 14px 8px 14px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
 .add-option {
-background-color: #DF1E12 !important;
-border: none;
-border-radius: 5px;
-padding: 6px;
-font-weight: 400;
-font-size: 14px;
-color: white;
+  background-color: #DF1E12 !important;
+  border: none;
+  border-radius: 5px;
+  padding: 6px;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
 }
-a:link { 
-  text-decoration: none; 
-} 
-a:visited { 
-  text-decoration: none; 
-} 
-a:hover { 
-  text-decoration: none; 
-} 
-a:active { 
-  text-decoration: none; 
+
+.against {
+  background-color: black !important;
+  border: none;
+  border-radius: 7px;
+  padding: 3px;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+}
+
+.vote-for {
+  background-color: #DF1E12 !important;
+  border: none;
+  border-radius: 5px;
+  padding: 3px 31px;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+}
+
+.vote-against {
+  border: none;
+  background-color: transparent;
+  padding: 3px 31px;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
 }
 
 
