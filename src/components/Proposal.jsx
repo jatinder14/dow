@@ -1,28 +1,23 @@
 import React, { useState } from 'react';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
+import { useNavigate } from 'react-router-dom';
 let arr= [
-    { type: 'Executed', amount: '3,283,861' },
-    { type: 'Canceled', amount: '2,000,000' },
-    { type: 'Canceled', amount: '22,000,000' },
-    { type: 'Canceled', amount: '12,000,000' },
-    { type: 'Canceled', amount: '245,000,000' },
-    { type: 'Canceled', amount: '52,000,000' },
-    { type: 'Canceled', amount: '2,000,000' },
-    { type: 'Canceled', amount: '2,000,000' },
-    { type: 'Canceled', amount: '2,000,000' },
-    { type: 'Canceled', amount: '2,000,000' },
-    { type: 'Canceled', amount: '2,000,000' },
-    { type: 'Canceled', amount: '26,000,000' },
-    { type: 'Canceled', amount: '2,000,000' },
-    { type: 'Canceled', amount: '2,000,000' },
-    { type: 'Canceled', amount: '2,000,000' },
-    { type: 'Canceled', amount: '27,000,000' },
-    { type: 'Canceled', amount: '2,000,000' },
-    { type: 'Canceled', amount: '22452,000,000' },
-    { type: 'Canceled', amount: '2,000,000' },
-    { type: 'Canceled', amount: '2245,000,000' },
-    { type: 'Canceled', amount: '254,000,000' },]
+    { type: 'Executed', amount: '3,283,861', 'vote': '99.32%' },
+    { type: 'Canceled', amount: '2,000,000', 'vote': '44.5%'  },
+    { type: 'Canceled', amount: '22,000,000', 'vote': '44.5%'  },
+    { type: 'Canceled', amount: '12,000,000', 'vote': '44.5%'  },
+    { type: 'Canceled', amount: '245,000,000', 'vote': '44.5%'  },
+    { type: 'Executed', amount: '3,283,861', 'vote': '99.32%' },
+    { type: 'Canceled', amount: '2,000,000', 'vote': '44.5%'  },
+    { type: 'Canceled', amount: '22,000,000', 'vote': '44.5%'  },
+    { type: 'Canceled', amount: '12,000,000', 'vote': '44.5%'  },
+    { type: 'Executed', amount: '3,283,861', 'vote': '44.5%' },
+    { type: 'Canceled', amount: '2,000,000', 'vote': '44.5%'  },
+    { type: 'Canceled', amount: '22,000,000', 'vote': '99.32%'  },
+    { type: 'Canceled', amount: '12,000,000', 'vote': '99.32%'  },
+ 
+]
 
 
 export function Proposal() {
@@ -51,7 +46,7 @@ export function Proposal() {
       </div>
       
       {proposalsToDisplay.map((proposal, index) => (
-        <ProposalItem key={index} type={proposal.type} amount={proposal.amount} />
+        <ProposalItem key={index} type={proposal.type} amount={proposal.amount} vote={proposal.vote} />
       ))}
       <hr/>
 
@@ -70,14 +65,19 @@ export function Proposal() {
   );
 }
 
-function ProposalItem({ type, amount }) {
+function ProposalItem({ type, amount, vote }) {
+  const navigate=useNavigate();
+
+  function openProposal() {
+      navigate('/viewproposal',{ state : { type, amount, vote } });
+  }
   return (
     <>
       <hr />
       <div className="proposal-item p-3">
         <div className="proposal">
           <span className="proposal-text">Proposal for Withdrawal of ${amount} for Donations to Holders</span>
-          <span className="proposal-detail">{">"}</span>
+          <button className="proposal-detail" onClick={openProposal}>{">"}</button>
         </div>
 
         {type === 'Executed' ? (
@@ -88,7 +88,7 @@ function ProposalItem({ type, amount }) {
             </p>
             <div>
               <button className="button-passed">PASSED</button>
-              <button className="button-vote mx-2">Vote for: 99.32%</button>
+              <button className="button-vote mx-2">Vote for: ${vote}</button>
             </div>
           </div>
         ) : (
@@ -99,7 +99,7 @@ function ProposalItem({ type, amount }) {
             </p>
             <div>
               <button className="button-failed">FAILED</button>
-              <button className="button-vote mx-2">Vote for: 99.32%</button>
+              <button className="button-vote mx-2">Vote for: ${vote}</button>
             </div>
           </div>
         )}

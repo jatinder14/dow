@@ -14,6 +14,7 @@ function EmailInput() {
     const [email,setEmail] = useState('');
     function getEmail(e) {
         setEmail(e.target.value)
+        console.log("jatinder",email)
     }
 
     return (

@@ -1,65 +1,59 @@
-import { useState } from 'react'
-import homeBackground from '../public/home.png'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { Signup } from "./components/pages/Signup"
-import Home  from "./Home"
-import { Navbar } from './components/Navbar'
-
+// using hashrouter
+import { useState } from 'react';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { AddProposal } from './components/pages/AddProposal';
+import Home from './Home';
+import { Navbar } from './components/Navbar';
+import { ViewProposal } from './components/pages/ViewProposal';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
       <Navbar />
-      <BrowserRouter>
+      <Router>
         <Routes>
-          <Route path="/" element={<Home />}  ></Route>
-          <Route path="/signup" element={<Signup />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/addproposal" element={<AddProposal />} />
+          <Route path="/viewproposal" element={<ViewProposal />} />
         </Routes>
-      </BrowserRouter>
+      </Router>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
 
-
-
+// using react-router
 // import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
+// import homeBackground from '../public/home.png'
 // import viteLogo from '/vite.svg'
 // import './App.css'
+// import { BrowserRouter, Routes, Route } from "react-router-dom"
+// import { AddProposal } from "./components/pages/AddProposal"
+// import Home  from "./Home"
+// import { Navbar } from './components/Navbar'
+// import { ViewProposal } from './components/pages/ViewProposal'
+
 
 // function App() {
 //   const [count, setCount] = useState(0)
 
 //   return (
 //     <>
-//       <div>
-//         <a href="https://vitejs.dev" target="_blank">
-//           <img src={viteLogo} className="logo" alt="Vite logo" />
-//         </a>
-//         <a href="https://react.dev" target="_blank">
-//           <img src={reactLogo} className="logo react" alt="React logo" />
-//         </a>
-//       </div>
-//       <h1>Vite + React</h1>
-//       <div className="card">
-//         <button onClick={() => setCount((count) => count + 1)}>
-//           count is {count}
-//         </button>
-//         <p>
-//           Edit <code>src/App.jsx</code> and save to test HMR
-//         </p>
-//       </div>
-//       <p className="read-the-docs">
-//         Click on the Vite and React logos to learn more
-//       </p>
+//       <Navbar />
+//       <BrowserRouter>
+//         <Routes>
+//           <Route path="/" element={<Home />}  ></Route>
+//           <Route path="/addproposal" element={<AddProposal />} />
+//           <Route path="/viewproposal" element={<ViewProposal />} />
+//         </Routes>
+//       </BrowserRouter>
 //     </>
 //   )
 // }
 
 // export default App
+
+

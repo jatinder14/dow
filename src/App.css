@@ -20,6 +20,13 @@
   /* background-image: url('../public/banner.png');
   background-size: contain; */
 }
+.governance{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  padding: 20px;
+}
 .eligibility{
   display: flex;
   flex-direction: column;
@@ -41,11 +48,30 @@
   border-radius: 5px;
   padding: 14px;
   font-weight: bold;
+  margin: 0px -3px;
 }
-.email-input input{
+.email-input input {
   border: 1.11px solid #40403E;
   border-radius: 5px;
   padding: 12px;
+  width: 40vw;
+  background: transparent;
+  color: white;
+}
+
+.option-input input {
+  border: 1.11px solid #40403E;
+  border-radius: 5px;
+  padding: 12px;
+}
+.option-input textarea{
+  border: 1.11px solid #40403E;
+  border-radius: 5px;
+  padding: 12px;
+  width: 100%;
+  height: 30vh;
+  background: transparent !important;
+  color: #E0E0E0;
 }
 .proposal{
   display: flex;
@@ -65,37 +91,55 @@ body{
 .text-canceled {
   color: #CC333C !important;
 }
-.button-passed{
+.button-passed {
   border: 1px solid #30BE83;
   background: #30be552e;
   border-radius: 5px;
   color: #30BE83 !important;
-  padding: 7px 22px;
+  padding: 1px 13px;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 13px;
+  margin-right: 8px;
+}
+.button-core {
+  border: 1px solid #9542FF;
+  background: #9930be36;
+  border-radius: 5px;
+  color: #9542FF !important;
+  padding: 1px 13px;
+  font-weight: 500;
+  font-size: 13px;
+  margin-right: 8px;
+}
+.button-core img{
+  margin: 0px 7px 4px 0px;
+  width: 12px;
 }
 .button-vote{
   border: 1px solid #FFFFFF;
   background: #8080805e;
   border-radius: 5px;
   color: #FFFFFF !important;
-  padding: 7px 22px;
+  padding: 1px 13px;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 13px;
+  margin-right: 8px;
 }
 .button-failed{
   border: 1px solid #CC333C;
   background: #cc333c29;
   border-radius: 5px;
   color: #CC333C !important;
-  padding: 7px 22px;
+  padding: 1px 13px;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 13px;
 }
 .proposal-detail{
   color: #8080805e;
   font-size: 20px;
   font-weight: 900;
+  background-color: transparent;
+  border:none;
 }
 .proposal-text {
   font-weight: 700;
@@ -110,11 +154,81 @@ body{
   float: right;
   color: pink !important;
 }
-.color {
+#extra-content {
+  display: none;
+}
+#myBtn {
+  background-color: transparent !important;
+  border: none;
+  color:white;
+  padding: 0px;
+}
+.content-text {
+  color: #9A9A9A;
+  font-size: 15px;
+  text-align: justify;
+}
+.highlighted-text {
+  color: white;
+  font-size: 15px;
+}
+.down-arrowhead img{
+  width: 18px;
+}
+/* .color {
   background-color: white !important ;
   color: pink !important;
+} */
+.link {
+  padding: 20px 0px;
+  color: #9A9A9A;
+  font-size: 12px;
+  border: none;
+  background: transparent !important;
 }
+.symbol {
+  font-weight: bolder;
+  font-size: large;
+}
+.propoasl-title{
+  background: transparent !important;
+  color: #E0E0E0;
+  width: 100%;
+}
+.option-container{
+border: 1px solid #12060540;
+background-color: #12060540;
+border-radius: 10px;
 
+}
+.option-header {
+padding: 8px 14px 8px 14px;
+font-weight: 600;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.add-option {
+background-color: #DF1E12 !important;
+border: none;
+border-radius: 5px;
+padding: 6px;
+font-weight: 400;
+font-size: 14px;
+color: white;
+}
+a:link { 
+  text-decoration: none; 
+} 
+a:visited { 
+  text-decoration: none; 
+} 
+a:hover { 
+  text-decoration: none; 
+} 
+a:active { 
+  text-decoration: none; 
+}
 
 
 
