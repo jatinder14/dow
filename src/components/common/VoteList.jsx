@@ -26,7 +26,7 @@ export function VoteList() {
             </div>
             <hr className="m-0" />
             <div className="option-header-2">
-                <div className="row">
+                <div className="">
                     <div className="option-header">
                         Voting Power
                         <span className="vote-amount" >
@@ -34,12 +34,12 @@ export function VoteList() {
                         </span>
                     </div>
                 </div>
-                <div className="row">
+                <div className="">
                     <div className="progress-bar">
-                        <ProgressBar completed={60} customLabel=" "   completedClassName="barCompleted"   barContainerClassName="progress-container" height="10px" />
+                        <ProgressBar completed={60} customLabel=" " completedClassName="barCompleted" barContainerClassName="progress-container" height="10px" />
                     </div>
                 </div>
-                <div className="row">
+                <div className="">
                     <div className="option-header">
                         Address
                         <span className="" >
@@ -55,7 +55,13 @@ export function VoteList() {
 
             <div className="option-body">
 
-                {option.map((curr, index) => { return <Item key={index} address={curr.address} hash={curr.hash} vote={curr.vote} /> })}
+                {option.map((curr, index) => {
+                    return (<>
+                        <Item key={index} address={curr.address} hash={curr.hash} vote={curr.vote} />
+                        <hr className="m-0" />
+                    </>
+                    )
+                })}
             </div>
         </div>
     )
@@ -65,7 +71,7 @@ function Item(props) {
     const [text, SetText] = useState("");
 
     return (
-        <div className="option-input  m-3">
+        <div className="voting-option  m-3">
             <div className="address">
                 {props.address}
             </div>

@@ -12,7 +12,7 @@ export function ViewProposal() {
     return (
         <div className='container'>
             <Governance />
-            <div className="row">
+            <div className="row" style={{'justifyContent':'space-between'}}>
                 <Content type={type} amount={amount} vote={vote} />
                 <MessageProgress />
             </div>

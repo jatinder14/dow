@@ -80,16 +80,26 @@
   align-items: center;
 }
 .line {
-  margin: -18px;
+  margin: -15px;
+  height: 40%;
 }
 .barCompleted {
   background-color: #30BE83;
   width: 80%;
+  border-radius: 5px;
 }
 .progress-container {
   background-color: #30be837d;
   height: 10px;
-
+  border-radius: 5px;
+}
+.progress-bar {
+  padding: 0px 14px;
+}
+.voting-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .vote-table {
   display: flex;

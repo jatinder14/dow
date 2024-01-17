@@ -1,0 +1,11 @@
+[1mdiff --git a/src/components/common/VoteList.jsx b/src/components/common/VoteList.jsx[m
+[1mindex f1f08eb..8193b26 100644[m
+[1m--- a/src/components/common/VoteList.jsx[m
+[1m+++ b/src/components/common/VoteList.jsx[m
+[36m@@ -1,5 +1,5 @@[m
+ import React, { useState } from "react";[m
+[31m-import ProgressBar from "@ramonak/react-progress-bar";[m
+[32m+[m[32mimport ProgressBar from "@/react-ramonakprogress-bar";[m
+ [m
+ export function VoteList() {[m
+ [m
