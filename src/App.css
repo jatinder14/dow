@@ -25,6 +25,11 @@
   background-size: contain; */
 }
 
+.proposal-item:hover {
+  border: 1px solid #FFFFFF;
+  cursor: pointer;
+}
+
 .governance {
   display: flex;
   flex-direction: column;
@@ -74,33 +79,40 @@
   border-radius: 5px;
   padding: 12px;
 }
+
 .MessageProgress {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .line {
   margin: -15px;
   height: 40%;
 }
+
 .barCompleted {
   background-color: #30BE83;
   width: 80%;
   border-radius: 5px;
 }
+
 .progress-container {
   background-color: #30be837d;
   height: 10px;
   border-radius: 5px;
 }
+
 .progress-bar {
   padding: 0px 14px;
 }
+
 .voting-option {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .vote-table {
   display: flex;
   align-items: center;
@@ -124,8 +136,11 @@
 }
 
 body {
-  /* background-image: radial-gradient(#760D07,black); */
-  background-color: black;
+  /* background-image: radial-gradient(#760D07,black);
+   */
+
+  background-image: url('../public/home.png');
+  /* background-color: black; */
   color: #FFFFFF;
 }
 
@@ -208,7 +223,18 @@ body {
 
 .pagination-right {
   float: right;
-  color: pink !important;
+
+}
+
+.pagination-item {
+  color: #FFFFFF !important;
+  border: 1px solid #FFFFFF !important;
+  background: #8080805e !important;
+}
+
+.pagination-item.clicked {
+  border: 1px solid #770D06 !important;
+  background: #770d061f !important;
 }
 
 #extra-content {
