@@ -10,17 +10,17 @@ export function Content({ type, amount, vote }) {
         var btnText = document.getElementById("myBtn");
 
         console.log(btnText)
-        if (["none",""].includes(extra.style.display)) {
+        if (["none", ""].includes(extra.style.display)) {
             extra.style.display = "block";
             btnText.childNodes[0].textContent = "Show Less ";
             btnText.childNodes[1].innerHTML = `<img src=${up} alt="" />`;
         } else {
             btnText.childNodes[0].textContent = "Show More ";
-            extra.style.display = "none"; 
+            extra.style.display = "none";
             btnText.childNodes[1].innerHTML = `<img src=${down} alt="" />`;
         }
     }
-    
+
 
     return (
         <>
@@ -31,7 +31,7 @@ export function Content({ type, amount, vote }) {
                         <p>
                             <span className="executed text-executed mr-2">Executed</span>
                             <span className="date-time mx-1">{" | "}</span><span className="date-time">{"02-11-2023 09:58:28"}</span>
-                            <span className="date-time mx-1">{" | "}</span><span className="date-time">{"Posi Manager: "}<a href="google.com">0xf1...354d<img src={jump} style={{ 'width': '20px' }} className="mx-2" /></a></span>
+                            <span className="date-time mx-1">{" | "}</span><span className="date-time">{"Posi Manager: "}<a href="">0xf1...354d<img src={jump} style={{ 'width': '20px' }} className="mx-2" /></a></span>
                         </p>
                         <div>
                             <button className="button-passed">PASSED</button>

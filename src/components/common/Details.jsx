@@ -3,7 +3,7 @@ import React from 'react';
 function Details() {
   return (
     <div className="section col-3">
-    <div className="card bg-light mb-3" style={{ maxWidth: '18rem' }}>
+    <div className="card add-proposal-details mb-3" style={{ maxWidth: '18rem' }}>
       <div className="card-header">Details</div>
       <div className="card-body">
         <h5 className="card-title">Light card title</h5>

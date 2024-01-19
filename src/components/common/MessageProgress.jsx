@@ -2,7 +2,9 @@ import line from "../../../public/line.png";
 import flower from "../../../public/flower.png";
 import Card from 'react-bootstrap/Card';
 import jump from "../../../public/jump.png";
-
+import { MessageDate } from "./MessageDate";
+import { MessageFirstState } from "./MessageFirstState";
+import { MessageGeneralState } from "./MessageGeneralState";
 
 export function MessageProgress() {
     return (
@@ -19,99 +21,23 @@ export function MessageProgress() {
                             key={variant}
                             text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
                             style={{ width: '100%' }}
-                            className="mb-2"
+                            className="mb-2 message-state"
                         >
-                            <Card.Header className="py-1 px-2 m-0" ><h5>Proposal History</h5></Card.Header>
-                            <Card.Body style={{ 'display': 'flex', 'padding': '0' }}>
-                                <div className="MessageProgress ">
+                            <Card.Header className="pd-2 pt-3 px-3 m-0 card-header" ><h5 className="mb-0 proposal-detail-text">Proposal History</h5></Card.Header>
+                            <MessageFirstState state={'Pending'} />
+                            <MessageGeneralState state={'Queued'} />
+                            <MessageGeneralState state={'Active'} />
+                            <Card.Body style={{ 'display': 'flex', 'margin': '-31px 0px 0px 0px', 'padding': '0px 0px 30px 0px' }}>
+                                <div className="MessageProgress col-2">
                                     <img src={flower} alt="" className="flower" />
-                                    <img src={line} alt="" className="line" />
                                 </div>
-                                <div className="message-detail mt-3">
+                                <div className="message-detail mt-3 col-10">
                                     <div className="state">
-
-                                        <Card.Title>Pending</Card.Title>
+                                        <Card.Title className="mb-0">Executed</Card.Title>
                                         <img src={jump} style={{ 'width': '20px' }} className="mx-2" />
                                     </div>
-                                    <Card.Text>
-                                        <span className="date-time">{"02-11-2023 09:58:28"}</span>
-                                    </Card.Text>
+                                    <MessageDate></MessageDate>
                                 </div>
-
-                            </Card.Body>
-                            <Card.Body style={{ 'display': 'flex', 'margin': '-77px 0px', 'padding': '30px 0' }}>
-                                <div className="MessageProgress ">
-                                    <img src={flower} alt="" className="flower" />
-                                    <img src={line} alt="" className="line" />
-                                </div>
-                                <div className="message-detail mt-3">
-
-                                    <Card.Title>Active</Card.Title>
-                                    {/* <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
-                                </Card.Text> */}
-                                </div>
-
-                            </Card.Body>
-                            <Card.Body style={{ 'display': 'flex' }}>
-                                <div className="MessageProgress ">
-                                    <img src={flower} alt="" className="flower" />
-                                    <img src={line} alt="" className="line" />
-                                </div>
-                                <div className="message-detail mt-3">
-
-                                    <Card.Title>Pending</Card.Title>
-                                    {/* <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
-                                </Card.Text> */}
-                                </div>
-
-                            </Card.Body>
-                            <Card.Body style={{ 'display': 'flex', 'margin': '-77px 0px' }}>
-                                <div className="MessageProgress ">
-                                    <img src={flower} alt="" className="flower" />
-                                    <img src={line} alt="" className="line" />
-                                </div>
-                                <div className="message-detail mt-3">
-
-                                    <Card.Title>Active</Card.Title>
-                                    {/* <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
-                                </Card.Text> */}
-                                </div>
-
-                            </Card.Body>
-                            <Card.Body style={{ 'display': 'flex' }}>
-                                <div className="MessageProgress ">
-                                    <img src={flower} alt="" className="flower" />
-                                    <img src={line} alt="" className="line" />
-                                </div>
-                                <div className="message-detail mt-3">
-
-                                    <Card.Title>Queued</Card.Title>
-                                    {/* <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
-                                </Card.Text> */}
-                                </div>
-
-                            </Card.Body>
-                            <Card.Body style={{ 'display': 'flex', 'margin': '-77px 0px 0 0' }} >
-                                <div className="MessageProgress ">
-                                    <img src={flower} alt="" className="flower" />
-                                </div>
-                                <div className="message-detail mt-3">
-
-                                    <Card.Title>Executed</Card.Title>
-                                    {/* <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
-                                </Card.Text> */}
-                                </div>
-
                             </Card.Body>
                         </Card>
                     ))}

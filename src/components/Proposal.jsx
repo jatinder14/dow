@@ -39,8 +39,10 @@ export function Proposal() {
     setCurrentPage(value);
     setClickedPage(value);
   };
+  const navigate = useNavigate();
   const addProposal = () => {
-    setProposalList([...proposalList, { type: 'new added', amount: 'new addednew added' }])
+    // setProposalList([...proposalList, { type: 'new added', amount: 'new addednew added' }])
+    navigate('/addProposal');
   }
 
   return (

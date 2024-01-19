@@ -88,7 +88,7 @@
 
 .line {
   margin: -15px;
-  height: 40%;
+  height: 50%;
 }
 
 .barCompleted {
@@ -231,6 +231,9 @@ body {
   border: 1px solid #FFFFFF !important;
   background: #8080805e !important;
 }
+.option-body {
+  padding: 5px 0px;
+}
 
 .pagination-item.clicked {
   border: 1px solid #770D06 !important;
@@ -239,6 +242,14 @@ body {
 
 #extra-content {
   display: none;
+}
+
+#more-content {
+  display: none;
+}
+.footer {
+  display: flex !important;
+  justify-content: center !important;
 }
 
 #myBtn {
@@ -250,7 +261,7 @@ body {
 
 .content-text {
   color: #9A9A9A;
-  font-size: 15px;
+  font-size: 18px;
   text-align: justify;
 }
 
@@ -287,10 +298,39 @@ body {
 }
 
 .option-container {
-  border: 1px solid #12060540;
-  background-color: #12060540;
+  /* border: 1px solid #120605; */
+  background-color: #120605;
   border-radius: 10px;
 
+}
+
+.notification-container {
+  margin-top: -20px;
+}
+
+.card-header {
+  border-bottom: 1px solid #404040;
+
+}
+
+.add-proposal-details {
+  background-color: #120605;
+}
+
+.proposal-detail-text {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.message-state {
+  background-color: #120605 !important;
+  border-radius: 15px;
+}
+
+.state {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .option-header {
