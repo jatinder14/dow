@@ -6,7 +6,7 @@
   background-color: #FFFFFF;
   color: #770D06;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 14px;
   font-weight: bold;
 }
@@ -59,7 +59,7 @@
   color: #FFFFFF;
   background-color: #770D06;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 14px;
   font-weight: bold;
   margin: 0px -3px;
@@ -231,6 +231,7 @@ body {
   border: 1px solid #FFFFFF !important;
   background: #8080805e !important;
 }
+
 .option-body {
   padding: 5px 0px;
 }
@@ -247,6 +248,7 @@ body {
 #more-content {
   display: none;
 }
+
 .footer {
   display: flex !important;
   justify-content: center !important;
@@ -309,12 +311,40 @@ body {
 }
 
 .card-header {
-  border-bottom: 1px solid #404040;
+  border-bottom: 1px solid #40403E;
 
 }
 
 .add-proposal-details {
   background-color: #120605;
+  border-radius: 15px;
+  color: #E0E0E0 !important;
+}
+
+.date-time-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date-time-details-container input {
+  width: 100%;
+  background: transparent;
+  color: white;
+  border: 1px solid #40403E;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 16px;
+  margin: 5px 0px;
+}
+
+.snapshot-input {
+  color: #0A7EEA !important;
+}
+
+.date-time-details label {
+  font-size: smaller;
+
 }
 
 .proposal-detail-text {

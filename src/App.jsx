@@ -5,14 +5,40 @@ import { AddProposal } from './components/pages/AddProposal';
 import Home from './Home';
 import { Navbar } from './components/Navbar';
 import { ViewProposal } from './components/pages/ViewProposal';
+//wagmi intergration
+import { createWeb3Modal, defaultConfig } from '@web3modal/ethers5/react'
 
-function App() {
-  const [count, setCount] = useState(0);
+// 1. Get projectId
+const projectId = 'e4d052da8319bccbc5548ec3b6956a54'
 
+// 2. Set chains
+const mainnet = {
+  chainId: 1,
+  name: 'Ethereum',
+  currency: 'ETH',
+  explorerUrl: 'https://etherscan.io',
+  rpcUrl: 'https://cloudflare-eth.com'
+}
+
+// 3. Create modal
+const metadata = {
+  name: 'My Website',
+  description: 'My Website description',
+  url: 'https://mywebsite.com',
+  icons: ['https://avatars.mywebsite.com/']
+}
+
+createWeb3Modal({
+  ethersConfig: defaultConfig({ metadata }),
+  chains: [mainnet],
+  projectId
+})
+
+export default function App() {
   return (
     <>
-      <Navbar />
       <Router>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/addproposal" element={<AddProposal />} />
@@ -22,38 +48,21 @@ function App() {
     </>
   );
 }
-
-export default App;
-
-// using react-router
-// import { useState } from 'react'
-// import homeBackground from '../public/home.png'
-// import viteLogo from '/vite.svg'
-// import './App.css'
-// import { BrowserRouter, Routes, Route } from "react-router-dom"
-// import { AddProposal } from "./components/pages/AddProposal"
-// import Home  from "./Home"
-// import { Navbar } from './components/Navbar'
-// import { ViewProposal } from './components/pages/ViewProposal'
-
+//React App
 
 // function App() {
-//   const [count, setCount] = useState(0)
+//   const [count, setCount] = useState(0);
 
 //   return (
 //     <>
-//       <Navbar />
-//       <BrowserRouter>
+//       <Router>
+//         <Navbar />
 //         <Routes>
-//           <Route path="/" element={<Home />}  ></Route>
+//           <Route path="/" element={<Home />} />
 //           <Route path="/addproposal" element={<AddProposal />} />
 //           <Route path="/viewproposal" element={<ViewProposal />} />
 //         </Routes>
-//       </BrowserRouter>
+//       </Router>
 //     </>
-//   )
+//   );
 // }
-
-// export default App
-
-
