@@ -20,6 +20,15 @@ const mainnet = {
   rpcUrl: 'https://cloudflare-eth.com'
 }
 
+const bnb = {
+  chainId: 56,
+  name: 'Binance Smart Chain',
+  currency: 'BNB',
+  explorerUrl: 'https://bscscan.com',
+  rpcUrl: 'https://bsc.drpc.org/'
+}
+
+
 // 3. Create modal
 const metadata = {
   name: 'My Website',
@@ -28,11 +37,24 @@ const metadata = {
   icons: ['https://avatars.mywebsite.com/']
 }
 
+// createWeb3Modal({
+//   ethersConfig: defaultConfig({ metadata }),
+//   chains: [mainnet],
+//   projectId
+// })
 createWeb3Modal({
-  ethersConfig: defaultConfig({ metadata }),
-  chains: [mainnet],
+  ethersConfig: defaultConfig({
+    metadata,
+    defaultChainId: 1,
+    enableEIP6963: true,
+    enableInjected: true,
+    enableCoinbase: true,
+    rpcUrl: '...' // used for the Coinbase SDK
+  }),
+  chains: [mainnet, bnb],
   projectId
 })
+
 
 export default function App() {
   return (
